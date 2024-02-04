@@ -4,3 +4,9 @@
 # First importing a library to work with it
 
 from gtts import gTTS # gtts - Interface of google translate api
+
+
+from playsound import playsound
+
+# Make request to google to get Synthesis
+tts = gTTS.gTTs("Hello World !") 
