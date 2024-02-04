@@ -6,8 +6,12 @@
 from gtts import gTTS
 import gtts # gtts - Interface of google translate api
 
+# importing io
+from io import BytesIO
 
 from playsound import playsound
+
+print(gtts.lang.tts_langs())
 
 # Make request to google to get Synthesis
 tts = gtts.gTTS("Bhaiya Ji, Kam ho Gya Acche se kam bhi kr rha hai ", lang='hi')
@@ -20,3 +24,5 @@ tts = gtts.gTTS("Bhaiya Ji, Kam ho Gya Acche se kam bhi kr rha hai ", lang='hi')
 
 #9 all available languages along with their IETF tag
 #9 print(gtts.lang.tts_langs())
+
+tts.write_to_fp()
