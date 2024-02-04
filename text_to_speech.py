@@ -10,10 +10,13 @@ import gtts # gtts - Interface of google translate api
 from playsound import playsound
 
 # Make request to google to get Synthesis
-tts = gtts.gTTS("Soumya Pagli hai", lang='hi')
+tts = gtts.gTTS("Bhaiya Ji, Kam ho Gya Acche se kam bhi kr rha hai ", lang='hi')
 
-# Saving audio to a file
-tts.save("hello.mp3")
+#1 Saving audio to a file
+#1 tts.save("hello.mp3")
 
-# play the sound
-playsound("hello.mp3")
+#2 play the sound
+#2 playsound("hello.mp3")
+
+#9 all available languages along with their IETF tag
+#9 print(gtts.lang.tts_langs())
