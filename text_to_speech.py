@@ -11,20 +11,19 @@ from io import BytesIO
 
 from playsound import playsound
 
-print(gtts.lang.tts_langs())
-
 # Make request to google to get Synthesis
-#tts = gtts.gTTS("Bhaiya Ji, Kam ho Gya Acche se kam bhi kr rha hai ", lang='hi')
+tts = gtts.gTTS("Bhaiya Ji, Kaam ho Gaya, Acche se kaam bhi kar raha hai ", lang='hi')
 
 #1 Saving audio to a file
-#1 tts.save("hello.mp3")
+tts.save("hello.mp3")
 
 #2 play the sound
-#2 playsound("hello.mp3")
+playsound("hello.mp3")
 
 #9 all available languages along with their IETF tag
 #9 print(gtts.lang.tts_langs())
 
-mp3_fp = BytesIO()
-tts = gTTS('"Hello', lang='hi')
-tts.write_to_fp(mp3_fp)
+# playing audio directly
+#mp3_fp = BytesIO()
+#tts = gTTS('"Hello', lang='hi')
+#tts.write_to_fp(mp3_fp)
