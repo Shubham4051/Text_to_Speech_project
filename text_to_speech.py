@@ -3,13 +3,14 @@
 
 # First importing a library to work with it
 
-from gtts import gTTS # gtts - Interface of google translate api
+from gtts import gTTS
+import gtts # gtts - Interface of google translate api
 
 
 from playsound import playsound
 
 # Make request to google to get Synthesis
-tts = gTTS.gTTs("Hello World !") 
+tts = gtts.gTTs("Hello World !") 
 
 # Saving audio to a file
 tts.save("hello.mp3")
