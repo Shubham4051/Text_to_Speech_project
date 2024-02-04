@@ -10,7 +10,7 @@ import gtts # gtts - Interface of google translate api
 from playsound import playsound
 
 # Make request to google to get Synthesis
-tts = gtts.gTTs("Hello World !") 
+tts = gtts.gTTS("Hello World")
 
 # Saving audio to a file
 tts.save("hello.mp3")
