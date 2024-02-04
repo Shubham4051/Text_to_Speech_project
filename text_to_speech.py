@@ -10,3 +10,6 @@ from playsound import playsound
 
 # Make request to google to get Synthesis
 tts = gTTS.gTTs("Hello World !") 
+
+# Saving audio to a file
+tts.save("hello.mp3")
