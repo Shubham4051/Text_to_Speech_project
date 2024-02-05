@@ -5,3 +5,7 @@
 # Tweaking volume
 # Saving the speech audio into a file.
 
+import pyttsx3
+
+# initialize Text-to-speech engine
+engine = pyttsx3.init()
