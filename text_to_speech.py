@@ -6,6 +6,9 @@ import pyttsx3
 engine = pyttsx3.init()
 engine.setProperty("rate",150)
 
-engine.say("this is the line to be converted")
-engine.runAndWait()
-engine.stop()
+def text_to_speech_function():
+    engine.say("this is the line to be converted")
+    engine.runAndWait()
+    engine.stop()
+
+text_to_speech_function()
