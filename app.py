@@ -10,14 +10,14 @@ app = FastAPI()
 def read_root():
     return{"message": "Welcome to the text-to-speech API"}
 
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app)
+
 @app.get("/text_to_speech")
 def text_to_speech(text: str):
     speech = text_to_speech(text)
     return{"speech": speech}
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app,port=8000)
 
 # app = FastAPI()
 

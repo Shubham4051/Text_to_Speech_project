@@ -7,7 +7,7 @@ engine = pyttsx3.init()
 engine.setProperty("rate",150)
 
 def text_to_speech_function():
-    engine.say("this is the line to be converted")
+    engine.say(input())
     engine.runAndWait()
     engine.stop()
 
