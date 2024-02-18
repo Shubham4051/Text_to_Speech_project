@@ -2,7 +2,8 @@ from fastapi import FastAPI, Request
 from typing import Optional
 import pyttsx3
 from pyttsx3 import init
-import text_to_speech
+# import text_to_speech
+from text_to_speech import text_to_speech_function
 
 app = FastAPI()
 
@@ -10,16 +11,17 @@ app = FastAPI()
 def read_root():
     return{"message": "Welcome to the text-to-speech API"}
 
+
+@app.post("/text_to_speech")
+def api_text_to_speech(text: str):
+    text_to_speech_function(text)
+
+    return{"abcgddc"}
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app)
-
-@app.get("/text_to_speech")
-def text_to_speech(text: str):
-    speech = text_to_speech(text)
-    return{"speech": speech}
-
-# app = FastAPI()
+# app = FastAPI() ok
 
 # engine = init()
 
