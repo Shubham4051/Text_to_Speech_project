@@ -15,5 +15,5 @@ def text_to_speech_function(text: str):
     engine.stop()
     return
 
-text_to_speech_function("lets go to work")
+# text_to_speech_function()
 
