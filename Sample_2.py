@@ -11,7 +11,7 @@ import pyttsx3
 
 times = int(input('Enter a number '))
 engine = pyttsx3.init()
-engine.setProperty("rate", 100)
+engine.setProperty("rate", 200)
 while times > 0:
     times -= 1
 # convert this text to speech
