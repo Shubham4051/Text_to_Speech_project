@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Request
-from speech_engine import Text_to_Speech
+from _Speech_Engine import _Speech_Engine
 
 app = FastAPI()
 
@@ -9,16 +9,13 @@ def read_root():
 
 @app.post("/text_to_speech")
 def api_text_to_speech(text: str):
-    
-    
-    
-    # try :
-    #     speech = Text_to_Speech()
-    #     speech.start(text)
-    #     del(speech)
-    #     return{"Success"}
-    # except Exception as e:
-    #     print(e)
+    try :
+        text_to_Speech = _Speech_Engine()
+        text_to_Speech.start(text)
+        del(text_to_Speech)
+        return{"Success"}
+    except Exception as e:
+        print(e)
 
 if __name__ == "__main__":
     import uvicorn

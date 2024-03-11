@@ -27,9 +27,6 @@ def api_text_to_speech(text: str):
     except Exception as e:
         print(e)
 
-
-    return {"abcgddc"}
-
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app)
